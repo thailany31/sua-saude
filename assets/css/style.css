@@ -1,0 +1,275 @@
+
+/* =================================
+   ELAS EM REDE - ESTILO PRINCIPAL
+================================= */
+
+:root {
+    --rosa: #c75b83;
+    --rosa-claro: #fceaf1;
+    --rosa-escuro: #963c60;
+    --fundo: #fff9fb;
+    --branco: #ffffff;
+    --texto: #393139;
+    --cinza: #777078;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: var(--branco);
+    min-height: 85px;
+    padding: 20px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 2px 12px #0000000a;
+}
+
+.logo {
+    color: var(--rosa-escuro);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--rosa);
+}
+
+.btn-header,
+.btn-principal {
+    background: var(--rosa);
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-header:hover,
+.btn-principal:hover {
+    background: var(--rosa-escuro);
+}
+
+/* INÍCIO */
+
+.inicio {
+    min-height: 520px;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        120deg,
+        #fceaf1,
+        #fff9fb
+    );
+}
+
+.inicio-conteudo {
+    max-width: 650px;
+}
+
+.inicio-conteudo span {
+    color: var(--rosa-escuro);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.inicio h1 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.15;
+    margin: 20px 0;
+    color: #63364a;
+}
+
+.inicio p {
+    color: var(--cinza);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* SEÇÕES */
+
+.secao {
+    padding: 85px 8%;
+    text-align: center;
+}
+
+.secao h2 {
+    color: var(--rosa-escuro);
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.secao > p {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: var(--cinza);
+}
+
+/* CARTÕES */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px #0000000a;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--rosa-escuro);
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: var(--cinza);
+}
+
+/* MAPA E LOCALIZAÇÃO */
+
+.mapa {
+    background: var(--rosa-claro);
+}
+
+.busca-localizacao {
+    background: white;
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 30px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 12px;
+}
+
+.busca-localizacao label {
+    font-weight: bold;
+}
+
+.busca-localizacao select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    background: white;
+    font-size: 15px;
+}
+
+.busca-localizacao button {
+    background: var(--rosa);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#resultado-ubs,
+#mapa-interativo {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 900px;
+    color: var(--cinza);
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #63364a;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h3 {
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 850px) {
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .inicio {
+        padding: 75px 7%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .secao {
+        padding: 60px 6%;
+    }
+
+    .inicio h1 {
+        font-size: 35px;
+    }
+
+    .btn-header {
+        font-size: 13px;
+    }
+}
